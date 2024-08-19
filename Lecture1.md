@@ -69,8 +69,7 @@
 - ## First use of Julia
 	- In the REPL now we can use Julia to make some simple computations
 	- We can use Julia as a simple calculator
-		-
-		  ```julia
+		- ```julia
 		  julia> 1.0 + 1.0
 		  2.0
 		  ```
@@ -145,8 +144,7 @@
 - We would like to plot the histogram of an orbit, to visualize the frequency of visits of the dynamical system  $T:[0,1]\to [0,1]$ , $T(x)=4x(1-x)$ , in different parts of the interval
 - Since we already have implemented the orbit function this is quite easy
 - We need to install the Plots package (it takes some time)
--
-  ```julia
+- ```julia
   Pkg.add("Plots")
   using Plots
   ```
@@ -159,13 +157,13 @@
   plt
   ```
 - In this case the density distribution of orbits is known
-$$g(x)=\frac{1}{\pi \sqrt{x(1-x)}}$$-
-  ```julia
+$$g(x)=\frac{1}{\pi \sqrt{x(1-x)}}$$
+- ```julia
   g(x) = 1/(pi*(sqrt(x*(1-x))))
   plot!(plt, g, 0, 1, color=:orange, label = "Density")
   ```
 - The command plot! allows us to plot on top of an already made plot
--
+
 - ## Summary of the lecture
 	- We installed Julia and VScode
 	- We installed some basic packages
