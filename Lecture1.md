@@ -75,34 +75,28 @@
 		  2.0
 		  ```
 	- It is worth starting to think about types
-		-
-		  ```julia
+		- ```julia
 		  julia> typeof(1.0)
 		  Float64
 		  ```
-		-
-		  ```julia
+		- ```julia
 		  julia> typeof(1)
 		  Int64
 		  ```
-		-
-		  ```julia
+		- ```julia
 		  julia>  typeof(1.0+0.3*im)
 		  ComplexF64 (alias for Complex{Float64})
 		  ```
-		-
 	- As you can see Julia implicitly identifies the types of the objects: Julia is a typed language and under the hood it uses types to identify and dispatch the right function
 	- What is the difference between Julia and Python?
 		- **Just in time** compilation
 		- We define a function
-			-
-			  ```julia
+			- ```julia
 			  T(x) = 4*x*(1-x)
 			  T (generic function with 1 method)
 			  ```
 		- What is going to happen when we run this function?
-			-
-			  ```julia
+			- ```julia
 			  julia> T(0)
 			  0
 			  julia> @code_warntype T(0)
@@ -123,8 +117,7 @@
 		- We ran the example in the help
 - ## Declaring more complex functions in julia
 - We open a file and add the following code
--
-  ```julia
+- ```julia
   function orbit(T, x0::Float64, N)
      orb = zeros(Float64, N)
      x = x0
@@ -136,8 +129,7 @@
   end
   ```
 - We would like to be able not to worry about the input type, but types are something we can work with in Julia, to do so we use the `typeof` function
--
-  ```julia
+- ```julia
   function orbit(T, x0, N)
      orb = zeros(typeof(x0), N)
      x = x0
@@ -160,8 +152,7 @@
   ```
 - Now, we define our dynamical system and compute an orbit that starts at the point $x0=0.1$
 - It is worth remarking that this is a numerical experiment
--
-  ```julia
+- ```julia
   T(x) = 4*x*(1-x)
   v = orbit(T, 0.1, 10000)
   plt = histogram(v, normalize = :pdf, label = "Empirical", bins = 100)
