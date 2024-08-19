@@ -40,7 +40,6 @@
 	- Install the Julia extension, that is going to take care of the interface between VSCode and Julia
 		- If you have any problem, probably is the fact that the extension is not able to find the julia executable
 		- On Ubuntu, if you installed through snap, the path is `/snap/julia/current/bin/julia`
-		-
 - ## First steps in VSCode/Julia
 	- We make a directory, I called it `~/Coding/HSI2024`
 	- Good practice: when we work on a new project, whether its coding a package or experiments, it is good to make a new environment, so you avoid loading unnecessary packages for your actual work (loading unnecessary packages)
